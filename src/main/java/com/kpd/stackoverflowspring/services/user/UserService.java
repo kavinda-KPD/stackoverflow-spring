@@ -5,4 +5,6 @@ import com.kpd.stackoverflowspring.dtos.signupDTO;
 
 public interface UserService {
     UserDTO createUser(signupDTO signupDTO);
+
+    boolean hasUserWithEmail(String email);
 }

@@ -29,4 +29,9 @@ public class UserServiceIMPL implements UserService{
 
         return createdUserDTO;
     }
+
+    @Override
+    public boolean hasUserWithEmail(String email) {
+        return userRepository.findFirstByEmail(email).isPresent();
+    }
 }
